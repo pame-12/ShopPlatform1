@@ -1,0 +1,63 @@
+﻿@model ShopPlatform.Web2.Services.Employee
+
+<h2>Employee Details</h2>
+
+<div>
+    <h4>@Model.FullName</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">ID</dt>
+        <dd class="col-sm-9">@Model.EmpId</dd>
+
+        <dt class="col-sm-3">First Name</dt>
+        <dd class="col-sm-9">@Model.FirstName</dd>
+
+        <dt class="col-sm-3">Last Name</dt>
+        <dd class="col-sm-9">@Model.LastName</dd>
+
+        <dt class="col-sm-3">Title</dt>
+        <dd class="col-sm-9">@Model.Title</dd>
+
+        <dt class="col-sm-3">Title of Courtesy</dt>
+        <dd class="col-sm-9">@Model.TitleOfCourtesy</dd>
+
+        <dt class="col-sm-3">Birth Date</dt>
+        <dd class="col-sm-9">@Model.BirthDate.ToString("yyyy-MM-dd")</dd>
+
+        <dt class="col-sm-3">Hire Date</dt>
+        <dd class="col-sm-9">@Model.HireDate.ToString("yyyy-MM-dd")</dd>
+
+        <dt class="col-sm-3">Address</dt>
+        <dd class="col-sm-9">@Model.Address</dd>
+
+        <dt class="col-sm-3">City</dt>
+        <dd class="col-sm-9">@Model.City</dd>
+
+        <dt class="col-sm-3">Region</dt>
+        <dd class="col-sm-9">@Model.Region</dd>
+
+        <dt class="col-sm-3">Postal Code</dt>
+        <dd class="col-sm-9">@Model.PostalCode</dd>
+
+        <dt class="col-sm-3">Country</dt>
+        <dd class="col-sm-9">@Model.Country</dd>
+
+        <dt class="col-sm-3">Phone</dt>
+        <dd class="col-sm-9">@Model.Phone</dd>
+
+        <dt class="col-sm-3">Manager ID</dt>
+        <dd class="col-sm-9">@Model.MgrId</dd>
+
+        <dt class="col-sm-3">Deleted</dt>
+        <dd class="col-sm-9">@Model.Deleted</dd>
+
+        <dt class="col-sm-3">Creation</dt>
+        <dd class="col-sm-9">@Model.CreationDate (User: @Model.CreationUser)</dd>
+
+        <dt class="col-sm-3">Last Modify</dt>
+        <dd class="col-sm-9">@Model.ModifyDate (User: @Model.ModifyUser)</dd>
+    </dl>
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.EmpId" class="btn btn-warning">Edit</a>
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>

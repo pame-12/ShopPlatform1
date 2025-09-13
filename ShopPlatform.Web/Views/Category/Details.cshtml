@@ -1,0 +1,20 @@
+﻿@model ShopPlatform.Domain.Entities.Customer
+
+@{
+    ViewData["Title"] = "Customer Details";
+}
+
+<h1>Customer Details</h1>
+
+<div>
+    <h4>@Model.CompanyName</h4>
+    <p><strong>Contact:</strong> @Model.ContactName (@Model.ContactTitle)</p>
+    <p><strong>Email:</strong> @Model.Email</p>
+    <p><strong>Phone:</strong> @Model.Phone</p>
+    <p><strong>Address:</strong> @Model.Address, @Model.City, @Model.Country</p>
+</div>
+
+<p>
+    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@Model.CustId">Edit</a>
+    <a class="btn btn-secondary" asp-action="Index">Back</a>
+</p>

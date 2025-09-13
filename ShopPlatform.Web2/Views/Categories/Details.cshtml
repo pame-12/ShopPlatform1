@@ -1,0 +1,27 @@
+﻿@model ShopPlatform.Web2.Services.Category
+
+<h2>Category Details</h2>
+
+<div>
+    <h4>@Model.CategoryName</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">ID</dt>
+        <dd class="col-sm-9">@Model.CategoryId</dd>
+
+        <dt class="col-sm-3">Description</dt>
+        <dd class="col-sm-9">@Model.Description</dd>
+
+        <dt class="col-sm-3">Deleted</dt>
+        <dd class="col-sm-9">@Model.Deleted</dd>
+
+        <dt class="col-sm-3">Creation</dt>
+        <dd class="col-sm-9">@Model.CreationDate (User: @Model.CreationUser)</dd>
+
+        <dt class="col-sm-3">Last Modify</dt>
+        <dd class="col-sm-9">@Model.ModifyDate (User: @Model.ModifyUser)</dd>
+    </dl>
+</div>
+<a asp-action="Edit" asp-route-id="@Model.CategoryId" class="btn btn-warning">Edit</a>
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>
+

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ShopPlatform.Web2.Services.Employee>
+
+<h2>Employees</h2>
+
+<a asp-action="Create" class="btn btn-primary">Create New</a>
+
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Title</th>
+            <th>Birth Date</th>
+            <th>Hire Date</th>
+            <th>Phone</th>
+            <th>City</th>
+            <th>Deleted</th>
+            <th>Creation Date</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.EmpId</td>
+                <td>@item.FullName</td>
+                <td>@item.Title</td>
+                <td>@item.BirthDate.ToString("yyyy-MM-dd")</td>
+                <td>@item.HireDate.ToString("yyyy-MM-dd")</td>
+                <td>@item.Phone</td>
+                <td>@item.City</td>
+                <td>@item.Deleted</td>
+                <td>@item.CreationDate.ToString("yyyy-MM-dd")</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.EmpId" class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.EmpId" class="btn btn-sm btn-info">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.EmpId" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

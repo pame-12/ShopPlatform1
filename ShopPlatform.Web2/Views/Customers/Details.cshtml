@@ -1,0 +1,57 @@
+﻿@model ShopPlatform.Web2.Services.Customer
+
+<h2>Customer Details</h2>
+
+<div>
+    <h4>@Model.CompanyName</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">ID</dt>
+        <dd class="col-sm-9">@Model.CustId</dd>
+
+        <dt class="col-sm-3">Company Name</dt>
+        <dd class="col-sm-9">@Model.CompanyName</dd>
+
+        <dt class="col-sm-3">Contact Name</dt>
+        <dd class="col-sm-9">@Model.ContactName</dd>
+
+        <dt class="col-sm-3">Contact Title</dt>
+        <dd class="col-sm-9">@Model.ContactTitle</dd>
+
+        <dt class="col-sm-3">Email</dt>
+        <dd class="col-sm-9">@Model.Email</dd>
+
+        <dt class="col-sm-3">Phone</dt>
+        <dd class="col-sm-9">@Model.Phone</dd>
+
+        <dt class="col-sm-3">Fax</dt>
+        <dd class="col-sm-9">@Model.Fax</dd>
+
+        <dt class="col-sm-3">Address</dt>
+        <dd class="col-sm-9">@Model.Address</dd>
+
+        <dt class="col-sm-3">City</dt>
+        <dd class="col-sm-9">@Model.City</dd>
+
+        <dt class="col-sm-3">Region</dt>
+        <dd class="col-sm-9">@Model.Region</dd>
+
+        <dt class="col-sm-3">Postal Code</dt>
+        <dd class="col-sm-9">@Model.PostalCode</dd>
+
+        <dt class="col-sm-3">Country</dt>
+        <dd class="col-sm-9">@Model.Country</dd>
+
+        <dt class="col-sm-3">Deleted</dt>
+        <dd class="col-sm-9">@Model.Deleted</dd>
+
+        <dt class="col-sm-3">Creation</dt>
+        <dd class="col-sm-9">@Model.CreationDate (User: @Model.CreationUser)</dd>
+
+        <dt class="col-sm-3">Last Modify</dt>
+        <dd class="col-sm-9">@Model.ModifyDate (User: @Model.ModifyUser)</dd>
+    </dl>
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.CustId" class="btn btn-warning">Edit</a>
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>
